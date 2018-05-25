@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import {
   EventListComponent,
@@ -44,7 +44,10 @@ const jQuery = window['$'];
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
+    // if we use preloadingStrategy than the module is loaded on start of the application, without = on access of the module
+    // when the module is big, preload is a good option, so that the user is less time waiting, another good thing is to have
+    // a small starting module
     HttpClientModule
   ],
   declarations: [
