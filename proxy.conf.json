@@ -1,0 +1,7 @@
+{
+  "_comment": "when accessing /api redirect to http://localhost:8808 wich is our ngf-server ___ on packege.json, add --proxy-config proxy.conf.json to START",
+  "/api": {
+    "target": "http://localhost:8808",
+    "secure": false
+  }
+}
