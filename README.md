@@ -1,3 +1,13 @@
+# The project has no working tests as it was upgraded to angular/cli > 6
+
+To start:
+
+npm install
+npm run server
+npm start
+
+
+
 # NgFundamentals
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
